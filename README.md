@@ -43,7 +43,7 @@ This project implements a complete self-service fast food system, including:
 ### 1. Self-Service Terminal (Frontend)
 
 Access the terminal through a web server:
-- URL: http://localhost/teste/index.html
+- URL: http://localhost/index.html
 
 ### 2. Node.js API (Backend)
 
