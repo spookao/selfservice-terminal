@@ -1,4 +1,4 @@
-# FastFood Express
+# FastFood
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen" alt="Status">
@@ -90,9 +90,11 @@ java -jar target/java-app-1.0-SNAPSHOT-jar-with-dependencies.jar
 - Maven
 - Web server (Apache, Nginx, etc.)
 
-## Screenshots
+## Video
 
-*[Screenshots to be added]*
+https://github.com/user-attachments/assets/9d69f913-814d-475a-a9d1-52d764eeee9d
+
+
 
 ## License
 
@@ -100,4 +102,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-- Your Name - *Initial work*
+- Alexandre Duarte
