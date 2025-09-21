@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood Self-Service</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-screen" id="welcome-screen">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <h1>FastFood</h1>
+            </div>
+            <h2>Bem-vindo ao nosso Self-Service</h2>
+            <p>Toque no ecrã para começar o seu pedido</p>
+            <button id="start-order-btn" class="btn-primary">Iniciar Pedido</button>
+        </div>
+
+        <div class="menu-screen hidden" id="menu-screen">
+            <header>
+                <div class="logo-small">
+                    <i class="fas fa-utensils"></i>
+                    <h2>FastFood</h2>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+
+            <div class="categories">
+                <button class="category-btn active" data-category="burgers">Hambúrgueres</button>
+                <button class="category-btn" data-category="sides">Acompanhamentos</button>
+                <button class="category-btn" data-category="drinks">Bebidas</button>
+                <button class="category-btn" data-category="desserts">Sobremesas</button>
+                <button class="category-btn" data-category="combos">Menus</button>
+            </div>
+
+            <div class="menu-items" id="menu-items">
+                <!-- Menu items will be loaded dynamically -->
+            </div>
+
+            <footer>
+                <button id="back-btn" class="btn-secondary">Voltar</button>
+                <button id="view-cart-btn" class="btn-primary">Ver Carrinho</button>
+            </footer>
+        </div>
+
+        <div class="cart-screen hidden" id="cart-screen">
+            <header>
+                <h2>Seu Pedido</h2>
+            </header>
+
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be loaded dynamically -->
+            </div>
+
+            <div class="cart-summary">
+                <div class="total">
+                    <span>Total:</span>
+                    <span id="cart-total">€0.00</span>
+                </div>
+            </div>
+
+            <footer>
+                <button id="back-to-menu-btn" class="btn-secondary">Continuar a Comprar</button>
+                <button id="checkout-btn" class="btn-primary">Finalizar Pedido</button>
+            </footer>
+        </div>
+
+        <div class="payment-screen hidden" id="payment-screen">
+            <header>
+                <h2>Método de Pagamento</h2>
+            </header>
+
+            <div class="payment-options">
+                <div class="payment-option" data-payment="counter">
+                    <i class="fas fa-cash-register"></i>
+                    <h3>Pagar no Balcão</h3>
+                    <p>Pague em dinheiro ou cartão no balcão</p>
+                </div>
+                <div class="payment-option" data-payment="card">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Cartão Bancário</h3>
+                    <p>Multibanco, VISA, Mastercard</p>
+                </div>
+                <div class="payment-option" data-payment="mbway">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>MB WAY</h3>
+                    <p>Pague com o seu telemóvel</p>
+                </div>
+            </div>
+
+            <footer>
+                <button id="back-to-cart-btn" class="btn-secondary">Voltar ao Carrinho</button>
+            </footer>
+        </div>
+
+        <div class="order-confirmation-screen hidden" id="order-confirmation-screen">
+            <div class="confirmation-content">
+                <i class="fas fa-check-circle"></i>
+                <h2>Pedido Confirmado!</h2>
+                <p>O seu número de pedido é:</p>
+                <div class="order-number" id="order-number">123</div>
+                <p>Por favor, aguarde no balcão para retirar o seu pedido.</p>
+                <button id="new-order-btn" class="btn-primary">Novo Pedido</button>
+            </div>
+        </div>
+
+        <div class="customize-screen hidden" id="customize-screen">
+            <header>
+                <h2 id="customize-item-name">Personalizar Item</h2>
+            </header>
+
+            <div class="customize-options" id="customize-options">
+            </div>
+
+            <footer>
+                <button id="cancel-customize-btn" class="btn-secondary">Cancelar</button>
+                <button id="add-to-cart-btn" class="btn-primary">Adicionar ao Carrinho</button>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
